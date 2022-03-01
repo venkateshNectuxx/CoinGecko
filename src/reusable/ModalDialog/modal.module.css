@@ -1,0 +1,20 @@
+.mediaPopUp {
+  /* .modal-content{ */
+  background-color: grey;
+  /* } */
+}
+.modalHeader {
+  background-image: linear-gradient(to right, #41b885, #dfe5a5);
+  height: 53px;
+  text-align: left;
+  padding: 10px 1rem;
+}
+
+.modalTitle {
+  color: #fff;
+}
+
+.closeButton {
+  font-family: "Gotham-Book";
+  font-size: 26px;
+}
