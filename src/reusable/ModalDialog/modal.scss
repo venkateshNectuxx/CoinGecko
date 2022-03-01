@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+.modalContent{
+  border-radius: 12px;
+  .modalHeader{
+    .modalTitle {
+      color: $text-color-black;
+      font-size: 16px;
+    }
+    .closeBtn {
+      background-color: $button-secondary-bg;
+      border-color: $button-secondary-bg;
+      color: $text-color-black;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: unset;
+      outline: 0;
+    }
+  }
+  .modalBody{
+    padding: 1rem 1.5rem;
+  }
+}
+
+

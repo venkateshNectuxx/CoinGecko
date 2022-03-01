@@ -1,0 +1,163 @@
+@import '../styles/variables.scss';
+
+.coinListWrapper{
+  .logoImage{
+    width: auto;
+    height: 30px;
+  }
+  .sectionTitle{
+    font-size: 24px;
+    background-color: $light-bg;
+    text-align: center;
+    padding: 12px;
+  }
+}
+
+.tableWrapper{
+  .search-label{
+    font-size: 14px;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    span{
+      margin-right: 20px;
+      font-weight: 500;
+    }
+    input{
+      width: 30%;
+      font-size: 14px;
+      box-shadow: unset;
+      outline: 0;
+    }
+  }
+  .table{
+    & > :not(:first-child){
+      border-top: unset;
+    }
+    th{
+      background-color: $table-th-bg;
+      font-weight: 500;
+      font-size: 14px;
+      color: $text-color-dark;
+      padding: 1rem 0.5rem;
+
+    }
+    td{
+      font-size: 14px;
+      padding: 1rem 0.5rem;
+    }
+    tbody{
+      tr{
+        vertical-align: middle;
+        cursor: pointer;
+        &:hover{
+          background-color: $table-hover-color;
+        }
+      }
+    }
+  }
+  .pagination{
+    justify-content: flex-end;
+
+    .page-item{
+      .page-link{
+        font-size: 13px;
+        color: $text-color-dark;
+      }
+      &.active{
+        .page-link{
+          color: $text-white;
+        }
+      }
+      &:last-child{
+        .page-link{
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+          }
+      }
+      &:first-child{
+        .page-link{
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+  
+        }
+    }
+    }
+  }
+  #pageDropDown{
+    background-color: $button-secondary-bg;
+    border-color: $button-secondary-bg;
+    color: #555;
+    box-shadow: unset;
+    font-size: 13px;
+    border-radius: 50px;
+    padding: 3px 10px;
+  }
+}
+
+.infoHeader{
+  .cryptoInfo{
+    .cryptoName{
+      font-size: 16px;
+      margin-bottom: 0px;
+      span{
+        font-size: 9px;
+        font-weight: 500;
+        position: relative;
+        top: -5px;
+
+      }
+    }
+    .cryptoSymbol{
+      font-size: 13px;
+    }
+  }
+}
+.description{
+  &Wrapper{
+  }
+  &Title{
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  &Text{
+    font-size: 14px;
+  }
+}
+.hashingAlgo{
+  p{
+    margin-bottom: 0;
+    font-size: 14px;
+    color: $text-color-black;
+    font-weight: 600;
+  }
+  span{
+    font-size: 12px;
+    color: $text-color-dark;
+    display: block;
+  }
+}
+.modalFooter{
+  .genesisDate{
+    small{
+      display: block;
+      font-size: 14px;
+      color: $text-color-black;
+      font-weight: 500;
+    }
+    span{
+      display: block;
+      font-size: 13px;
+    }
+  }
+  .homePageLink{
+    h6{
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    a{
+      font-size: 13px;
+      display: inline-block;
+    }
+  }
+}

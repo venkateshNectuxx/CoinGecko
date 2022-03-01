@@ -40,6 +40,7 @@ export const TableList = (listData, columns, onrowClick) => {
                   pagination={paginationFactory()}
                   noDataIndication={"no results found"}
                   wrapperClasses="table-responsive"
+                  bordered={false}
                 />
               </div>
             )}
