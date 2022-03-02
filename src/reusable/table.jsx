@@ -1,23 +1,26 @@
-import React, {useState} from 'react'
+import React from 'react'
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, {Search} from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
 import "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.min.css";
 
-const options = {
-  paginationSize: 4,
-  pageStartIndex: 1,
-};
-
+/**
+ * common table component to render the data in table format
+ * @param {*} listData // data to display inside table body
+ * @param {*} columns //column to display the table header
+ * @param {*} onrowClick // optional function if need to trigger when row clicked
+ * @returns 
+ */
 export const TableList = (listData, columns, onrowClick) => {
 
   const { SearchBar } = Search;
 
   const tableRowEvents = {
+    // onclick the row this method will trigger.
     onClick: (e, row, rowIndex) => {
-      console.log(`clicked on row with index: ${rowIndex}`);
-      console.log(row.id)
-      onrowClick(row.id)
+      if(onrowClick){
+        onrowClick(row.id)
+      }
     },
     
   }

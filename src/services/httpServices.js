@@ -14,7 +14,6 @@ axios.defaults.baseURL = configVariables.baseURL;
 axios.interceptors.response.use(
   function (response) {
     let data = response.data;
-    console.log(data, "data");
     if (data || data?.Result) {
       return Promise.resolve(data);
     } else {
