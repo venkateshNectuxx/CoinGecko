@@ -3,6 +3,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## package depency issue
+we are suing react boostrap table if you are facing any issues installing those packages please use --legacy-peer-deps to install 
+
 ## Available Scripts
 
 In the project directory, you can run:
