@@ -17,7 +17,7 @@ const SingleCoin = ({isShowModal, closeModal, coinDetails}) => {
           <Card className="py-1 px-2 mb-4 bg-light">
           <Row className="py-2 px-3 align-items-center justify-content-between">
             <Col md={6}>
-              <div className="infoHeader d-flex align-items-center">
+              <div className="infoHeader d-flex">
                 <div className="cryptoLogo"><span><img src={coinDetails?.image?.thumb} alt="" /></span></div> 
                 <div className="cryptoInfo">
                   <h3 className="cryptoName text-success">
