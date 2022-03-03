@@ -93,6 +93,21 @@
     border-radius: 50px;
     padding: 3px 10px;
   }
+  .react-bs-table-sizePerPage-dropdown{
+    .dropdown{
+      &-menu{
+        min-width: 6rem;
+      }
+      &-item{
+        font-size: 13px;
+        a{
+          text-decoration: none;
+          color: $text-color-dark;
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 .infoHeader{
