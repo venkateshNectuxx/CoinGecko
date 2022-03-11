@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 /**
  * Custom service for axios methods
  */
-export const httpServices = {};
+export const httpServices:any = {};
 httpServices.get = get;
 
 axios.defaults.baseURL = configVariables.baseURL;
@@ -35,7 +35,7 @@ axios.interceptors.response.use(
 );
 
 //axios get method to get the data from Rest API
-function get(url) {
+function get(url: any) {
   return axios.get(url).then((response) => {
     return response;
   });

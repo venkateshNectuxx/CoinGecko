@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import { Button } from "react-bootstrap";
+import { modalProps } from "./typings";
 import "./modal.scss";
 
 /**
@@ -15,7 +16,7 @@ export default function Modaldialog({
   title,
   modelSize,
   fullscreen
-}) {
+}: modalProps) {
   return (
     <Modal
       show={show}

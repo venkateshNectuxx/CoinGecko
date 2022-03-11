@@ -4,7 +4,7 @@ import { APIURL } from "../../config";
 import { httpServices } from "../../services";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { TableList } from "../../reusable/table";
+import TableList from "../../reusable/table";
 import CoinDetail from "./coin"
 
 /*
@@ -21,7 +21,7 @@ const CoinList = () => {
       dataField : "image",
       text : "Image",
       editable: false,
-      formatter: (cellContent, row) => {
+      formatter: (_cellContent: any, row: any) => {
         return (
           <div>
             <img src={row.image} className="logoImage" alt="coin" />
@@ -57,12 +57,12 @@ const CoinList = () => {
   const listCoin = () => {
     const params = "?vs_currency=eur&order=market_cap_desc";
     httpServices.get(APIURL.COIN + APIURL.DS + APIURL.GET_MARKETS + params).then(
-      (resp) => {
+      (resp:any) => {
         if (resp) {
           setCoinData(resp);
         }
       },
-      (error) => {
+      (error:any) => {
         if (Array.isArray(error)) {
           error = error[0].msg;
         }
@@ -74,15 +74,15 @@ const CoinList = () => {
   };
 
   // function to get the individual coin data
-  const getCoin = (id) => {
+  const getCoin = (id:any) => {
     httpServices.get(APIURL.COIN + APIURL.DS + id).then(
-      (resp) => {
+      (resp:any) => {
         if (resp) {
           setShowModal(true)
            setCoinDetails(resp);
         }
       },
-      (error) => {
+      (error:any) => {
         // if error comes as an array we will get the first array to show in toast
         if (Array.isArray(error)) {
           error = error[0].msg;
@@ -109,7 +109,13 @@ const CoinList = () => {
       <br />
 
       <Row>
-        <Col>{TableList(coinData, Columns, getCoin)}</Col>
+        <Col>
+        <TableList 
+          listData = {coinData}
+          columns = {Columns}
+          onrowClick ={getCoin}
+        />
+        </Col>
       </Row>
         <CoinDetail closeModal={() => setShowModal(false)} isShowModal={showModal} coinDetails={coinDetails} />
     </div>

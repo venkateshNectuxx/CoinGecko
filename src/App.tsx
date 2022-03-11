@@ -1,5 +1,5 @@
-import {Container} from 'react-bootstrap'
-import CoinList from './pages/Coin'
+import { Container } from 'react-bootstrap';
+import CoinList from './pages/Coin';
 
 function App() {
   return (

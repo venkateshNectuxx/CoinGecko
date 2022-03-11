@@ -1,10 +1,11 @@
+import React from "react";
 import { Col, Row, Card } from "react-bootstrap";
 import Modal from '../../reusable/ModalDialog'
-
+import { coinDetail } from "./typings";
 /*
 * To showing the coin details in popup 
 */
-const SingleCoin = ({isShowModal, closeModal, coinDetails}) => {
+const SingleCoin = ({isShowModal, closeModal, coinDetails}: coinDetail) => {
   
   return (
     <div className="coinListWrapper">
